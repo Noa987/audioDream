@@ -1,5 +1,17 @@
 {
+    "name": "cytech/audio-dream",
     "require": {
-        "swiftmailer/swiftmailer": "^6.0"
-    }
+        "phpunit/phpunit": "^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\":"app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Noa Mourareau",
+            "email": "noa.mourareau@gmail.com"
+        }
+    ]
 }
