@@ -86,7 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Create the Transport
         $transport = (new Swift_SmtpTransport('ssl0.ovh.net', 465,'ssl'))
         ->setUsername('contact@dodobwebsite.fr') //j'ai utilisé mon adresse ovh plutot que gmail
-        ->setPassword('4-Slawlijorho');
+        ->setPassword('DORIANESTCON');
 
         // Create the Mailer using your created Transport
         $mailer = new Swift_Mailer($transport);

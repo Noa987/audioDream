@@ -41,6 +41,7 @@ session_start();
     <!-- Pied de page (footer) -->
     <?php require("php/footer.php"); ?>
 
+    <script type="text/javascript" src="app/functionnal.js" ></script>
     <script type="text/javascript" src="js/script.js" ></script>
 </body>
 </html>

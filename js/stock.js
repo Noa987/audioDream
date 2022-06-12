@@ -26,6 +26,8 @@ $(function(){
 
     $('.supprimerProduit').on("click", function(e) {
         e.preventDefault();
+        //Start time
+        console.time();
         const chemin = e.target.parentNode.parentNode;
             $.ajax({
                 type: "POST",
@@ -44,6 +46,8 @@ $(function(){
                     prixtot.textContent = parseFloat(parseFloat(prixtot.innerHTML) - result[1]).toFixed(2);
                     qtetot.textContent = parseInt(parseInt(qtetot.innerHTML) - result[0]);
                     chemin.remove();
+                    //Start end time
+                    console.timeEnd();
                 });
         });
 
