@@ -3,19 +3,25 @@ const products = [
     { model: '2', cat: '1', price: 229.95, stock: '2' },
     { model: '3', cat: '1', price: 49.99, stock: '3' },
     { model: '4', cat: '1', price: 99.99, stock: '3' },
-    { model: '5', cat: '2', price: 269.99 , stock: '2' },
-    { model: '5', cat: '2', price: 129.99 , stock: '3' },
-    { model: '5', cat: '2', price: 129.99 , stock: '4' },
-    { model: '5', cat: '2', price: 69.99 , stock: '2' },
-    { model: '5', cat: '2', price: 29.99 , stock: '3' }
+    { model: '5', cat: '2', price: 269.99, stock: '2' },
+    { model: '1', cat: '2', price: 129.99, stock: '3' },
+    { model: '2', cat: '2', price: 129.99, stock: '4' },
+    { model: '3', cat: '2', price: 69.99, stock: '2' },
+    { model: '4', cat: '2', price: 29.99, stock: '3' }
   ];
   
   const allStockPrice = products
     .map(p => p.price)
-    .reduce((sum,price,stock,i,array) => sum + price*stock,0);
+    .reduce((sum,price,stock) => sum + price*stock,0);
 
-  console.log(allStockPrice); //4339,45
+  console.log("Sum of the total stock : ",allStockPrice); //4339,45
 
+  const cat1price = products
+    .filter(p => p.cat === "1")
+    .map(p => p.price)
+    .reduce((sum,price) => sum + price, 0);
+  console.log("Sum of the prices of products of cat 1 :",cat1price);
+    
 function isLeap(year){
   return(year % 400 == 0) || (year % 4 == 0 && year % 400 != 0 );
 }
@@ -39,6 +45,16 @@ function numberOfDays(month,year) {
   } 
 }
 
-console.log(numberOfDays(1,2022)); //31
-console.log(numberOfDays(2,2020)); //29
-console.log(numberOfDays(2,2021)); //28
+function factorial(n){
+  if(n == 1 || n == 0) {
+    return n;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+console.log("Factorial of 5 : ",factorial(5));
+
+console.log("Numbers of day in january 2022 : ",numberOfDays(1,2022)); //31
+console.log("Numbers of day in feburary 2020 : ",numberOfDays(2,2020)); //29
+console.log("Numbers of day in feburary 2021 : ",numberOfDays(2,2021)); //28

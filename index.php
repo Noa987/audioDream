@@ -23,7 +23,7 @@ session_start();
         <div class="container">
             <div class="row align-items-center justify-content-evenly">
                 <div class="col-lg-4 order-lg-2">
-                    <p><img id="logo" src="img/accueil/logo-accueil.png "/></p>
+                    <p><img id="logo" src="img/accueil/logo-accueil.png " alt="Home image"/></p>
                 </div>
                 <div class="col-lg-6 order-lg-1 text-center text-lg-start">
                     <h2>Unique &amp; innovant</h2>
