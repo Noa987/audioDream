@@ -20,6 +20,7 @@ class UnitTest extends Testcase
         $calculator = new App\Calculator;
         $this->assertEquals(1, $calculator->f(0));
         $this->assertEquals(10, $calculator->f(3));
+        $this->assertEquals('NaN', $calculator->f('A'));
 
     }
 

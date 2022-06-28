@@ -9,7 +9,13 @@ class Calculator
     }
 
     public function f($x){
-        return $x*3+1;
+        if(is_int($x)){
+            return $x*3+1;
+        } else {
+            return('NaN');
+        }
     }
 
 }
+
+?>

@@ -1,0 +1,8 @@
+---
+report:
+    html: "/tmp/report/"
+    json: "/tmp/report.json"
+    violations: "/tmp/violations.xml"
+plugins:
+    git:
+        binary: git
