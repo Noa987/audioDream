@@ -20,7 +20,8 @@ class MonitorAspect implements Aspect
      * Method that will be called before real method
      *
      * @param MethodInvocation $invocation Invocation
-     * @Before("execution(public Example->*(*))")
+     * @Before("execution(public Calculator->*(*))")
+     * //Will call the aspect everytime one of a Calculator function will be called
      */
     public function beforeMethodExecution(MethodInvocation $invocation)
     {

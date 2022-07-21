@@ -1,4 +1,8 @@
 ---
+includes:
+    -"php"
+    -"test"
+    -"/"
 report:
     html: "/tmp/report/"
     json: "/tmp/report.json"
@@ -6,3 +10,4 @@ report:
 plugins:
     git:
         binary: git
+

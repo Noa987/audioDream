@@ -15,6 +15,10 @@ class Calculator
             return('NaN');
         }
     }
+    
+    function getFib($n){
+        return round(pow((sqrt(5)+1)/2, $n) / sqrt(5));
+    }
 
 }
 

@@ -24,6 +24,13 @@ class UnitTest extends Testcase
 
     }
 
+    public function testContact()
+    {
+        $contact = new App\ContactF;
+        $this->assertEquals("texte",$contact->verifyInput(" texte"));
+        $this->assertEquals("texte",$contact->verifyInput("texte \n"));
+    }
+
 }
 
 
